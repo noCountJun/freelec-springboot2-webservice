@@ -1,7 +1,6 @@
 package com.anse.book.springboot.domain.posts;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void 게시글저장_불러오기() {
+    public void postsSaveAndFind() {
         //given
         String title = "테스트 게시글";
         String content = "테스트 본문";
@@ -59,5 +58,8 @@ public class PostsRepositoryTest {
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
+
+
     }
+
 }

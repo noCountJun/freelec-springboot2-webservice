@@ -9,4 +9,11 @@ public class IndexController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
+    }
+
+
 }
